@@ -2,11 +2,13 @@
 
 ### Instruction on how to build and run the application
 `cat sample_input.txt | ./run.sh`
+
 ./run.sh build the docker and executes the matching_engine binary, This binary is present /app/MatchingEngine/install/bin/matching_engine in the docker 
 This binary satisfies the Runtime Requirenments mentioned in the assignment i.e. Executing ./run.sh locally must build and launch a Docker image that defaults to running your application. The ./run.sh file must accept piped input.
 
 ### Instruction on how to build and run the tests
 `./test.sh`
+
 There is a ./test.sh present in the repo root. ./test.sh builds the docker. During this build a cmake flag is passed to build the tests as well. As tests required googletests, it downloads and builds the googletest repo. Then this runs ctest in the /app/MatchingEngine/\_build folder. This runs the gtest present (src/MatchingEngine.t.cpp). Tests can also be run from docker by running /app/MatchingEngine/install/bin/matching_engine_test binary manually.
 
 ### How I approached the problem?
